@@ -1,0 +1,558 @@
+<html>
+<head>
+<style>
+h1{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30pt;
+}
+h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-bottom: 3%;
+  padding-top: -8%;
+  padding-left: -10%;
+}
+h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h4{
+  font-family: cursive;
+  font-size: large;
+  color:black;
+}
+p{
+  font-family: cursive;
+  font-weight: bold;
+}
+img {
+  border: 5px solid #555;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+div.gallery {
+    border-radius:30px;
+    border-style: unset;
+    color: rgb(0, 0, 0);
+
+    text-align: center;
+    font-size: 16px;
+    font-family: cursive;
+    margin: -4px;
+    border: 1px solid #fff;
+    float: center;
+    
+    
+    }
+div.gallery img {
+  width: 100%;
+
+  border-radius: 20px;
+}
+
+div.desc {
+  text-align: center;
+ color: black;
+ text-underline-position:none;
+ padding-left: 10%;
+}
+
+
+div.container {
+  text-align: center;
+  display: inline-flex;
+}
+
+div.p{
+  font-family: cursive;
+  font-weight: bold;
+}
+.child{
+  border: 5pt solid white;
+  float: left;
+  width: 50%;
+}
+*{
+  box-sizing: border-box;
+}
+.parent{
+  display: flex;
+  padding-top: 5%;
+  padding-left: 2%;
+}
+input[type=submit]{
+  width: 30%;
+  height: 7%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline:none;
+  box-sizing: border-box;
+  background-color:lightgreen;
+}
+input[type=submit]:hover{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+  cursor: pointer;
+  background-color: lightskyblue;
+}
+
+input[type=text]{
+  width: 60%;
+  height: 4%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline:none;
+  padding: 8px;
+  box-sizing: border-box;
+}
+input[type=text]:focus{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+textarea[name=Message]{
+  width: 60%;
+  height: 15%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline:none;
+  padding: 8px;
+  box-sizing: border-box;
+}
+textarea[name=Message]:focus{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+input[type=submit]{
+  width: 30%;
+  height: 4%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline:none;
+  padding: 4px;
+  box-sizing: border-box;
+  background-color:lightgreen;
+}
+input[type=submit]:hover{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+  cursor: pointer;
+  background-color: lightskyblue;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.table-box
+{
+    margin: 50px auto;
+}
+
+.table-row{
+    display: table;
+    width: 80%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: #555;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
+}
+.table-head{
+    background: #8665f7;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 600;
+}
+.table-head .table-cell{
+    border-right: none;
+}
+.table-cell{
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+}
+.first-cell{
+    text-align: left;
+    padding-left: 10px;
+}
+.last-cell{
+    border-right: none;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+button{
+  position: relative;
+  display: inline-block;
+  text-transform:unset;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20%;
+  border-color: white;
+  background-color:#00eeff;
+}
+button:hover{
+  background:linear-gradient(45deg,#7003ff,#00eeff);
+  box-shadow: 0 0 10px rgb(47, 144, 255), 0 0 40px rgb(47, 255, 245), 0 0 80px greenyellow;
+}
+@media only screen and (max-width: 600px) {
+  .table-row {
+    font-size: 11px;
+  }
+}
+</style> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button><a href="file:///C:/Users/USER/Desktop/HCI%20PROJECT/trai%20test1.html" style="text-decoration: none; color: black;">Previous</a></button>
+      <h1><center>SPECIAL INDUSTRIAL TRAINING</h1><br>
+      <P>  <div class="p" style="background-color: lightgreen; border-radius: 10px;">
+        The National Apprentice and Industrial Training Authority,
+         (NAITA) in its efforts to enhance the National Economy through
+          a wide range of activities aimed in particular at youth skill 
+          development, takes on the challenge of human resource development
+           in the country. NAITA recognizes the possible avenues of skill 
+           development, and the occupations so identified for skill 
+           development are grouped, or in it's terminology, "categorized"
+            based on the educational achievements required. Thus, Industrial
+             Training provided to Universities and Training Institutions by 
+             placing the students in the Industrial environment enable them 
+             to apply disciplines learned to gain practical experience, sound
+              appreciation and understanding of the theoretical principles in
+               work stations/ sites. This function is carried out by the Special
+                Industrial Training Section (SIT).  
+    </p></div>
+           <br>
+          
+      <P>  <div class="p" style="background-color:lightcyan; border-radius:20px;">
+        <h2><center><u>ROLE OF THE INDUSTRY</u></h2><br>
+        The industries make provision for these trainees to receive training as 
+        far as possible in keeping with the relevant Training Standard/Training 
+        Schedule The training would be supervised by a senior officer or a 
+        qualified Engineer, who may have been assigned for this purpose. These 
+        officers guide the trainees in maintaining their log books(Daily Diaries}, 
+        writing intermittent reports and assisting in making up a considerable 
+        coverage of their training. 
+
+    </p></div>
+           <br>
+           
+<section class="parent">
+    <section class="child">
+      <center><h2><u>Table gives the details of the various categories of trainees and the duration of training</u></h2>
+      <div class="table-box">
+        <div class="table-row table-head">
+            <div class="table-cell first-cell">
+                <p>Training Scheme</p>
+            </div>
+            <div class="table-cell">
+                <p>Duration</p>
+            </div>
+            <div class="table-cell last-cell">
+                <p></p>Institution
+            </div> 
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Engineering Undergraduate</p>
+            </div>
+            <div class="table-cell">
+                <p>06 months</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Peradeniya</p>
+            </div>
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Engineering Undergraduate</p>
+            </div>
+            <div class="table-cell">
+                <p>06 months</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Moratuwa</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Information Technology</p>
+            </div>
+            <div class="table-cell">
+                <p>06 months</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Moratuwa</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Quantity Surveying</p>
+            </div>
+            <div class="table-cell">
+                <p>08 (04 months two phases)</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Moratuwa</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Facilities Management</p>
+            </div>
+            <div class="table-cell">
+                <p>08 (04 months two phases)</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Moratuwa</p>
+            </div>
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>NDT (Engineering)</p>
+            </div>
+            <div class="table-cell">
+                <p>12 (06 months two phases)</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Moratuwa</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>NDT (Agriculture)</p>
+            </div>
+            <div class="table-cell">
+                <p>12 (04 months three phases)</p>
+            </div>
+            <div class="table-cell">
+                <p>Advance Technical Institute Hardy & Naiwala</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Micro Biology</p>
+            </div>
+            <div class="table-cell">
+                <p>03 months</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Kelaniya</p>
+            </div>
+        </div>
+
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Biological Science</p>
+            </div>
+            <div class="table-cell">
+                <p>03 months</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Kelaniya</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Zoological Science</p>
+            </div>
+            <div class="table-cell">
+                <p>03 months</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Kelaniya</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Applied Science</p>
+            </div>
+            <div class="table-cell">
+                <p>06 months</p>
+            </div>
+            <div class="table-cell">
+                <p>University of Wayamba</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Higher National Diploma in Information Technology</p>
+            </div>
+            <div class="table-cell">
+                <p>06 months</p>
+            </div>
+            <div class="table-cell">
+                <p>Advanced TechnologicalInstitute, Labuduwa</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Higher National Diploma in Management</p>
+            </div>
+            <div class="table-cell">
+                <p>06 months</p>
+            </div>
+            <div class="table-cell">
+                <p>Advanced Technological Institute Dehiwala, Kandy, Galle, Badulla, Jaffna</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>National Certificate for Industrial Technician</p>
+            </div>
+            <div class="table-cell">
+                <p>06 months</p>
+            </div>
+            <div class="table-cell">
+                <p>Technical College-Kandy and Ratmalana.</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>National Diploma in Agriculture</p>
+            </div>
+            <div class="table-cell">
+                <p>06 (03 months two phases)</p>
+            </div>
+            <div class="table-cell">
+                <p>Technical College-Kuliyapitiya/ Dambulla</p>
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>Higher National Diploma in Technology</p>
+            </div>
+            <div class="table-cell">
+                <p>06 (03 months two phases)</p>
+            </div>
+            <div class="table-cell">
+                <p>Advance Technological Institute Mattakkuliya</p>
+            </div>
+        </div>
+
+
+        </div>
+</div> 
+        <center><p>Marks are allocated on a percentage basis and a pass is awarded 
+          on a grading system.<br> A minimum of 50 marks should be obtained
+           subject to not below 25 marks being scored<br> for the viva, for a
+            pass. The result of the successful apprentice are submitted to
+             the relevant institution for prepare for certification.</center>
+    </section>
+    <section class="child" style="background-color:lightsteelblue; border-radius:20pt;">
+           <center><h2><u>IN PLANT TRAINING OF UNDERGRADUATE AND DIPLOMA STUDENTS OF UNIVERSITIES</u></h2>
+            <br>
+            
+                <p>•	The In-Plant training is a supplementary component to the courses
+                conducted by the Universities of Moratuwa and Peradeniya for the
+                Engineering Degree and Information Technology students, National
+                Diploma In Technology(NDT) students of Institute of Technologies, 
+                University of Moratuwa. and also to the NDT Agriculture students of
+                Hardy Advanced Technological Institute, Ampari.
+
+                <p>•	The Authority is also providing internship for the first time to the 
+                Micro Biology, Biological Science and Zoological Science students of 
+                Kelaniya University and the Applied Science students of the Wayamba
+                University. . Refer the table given below for more details.
+
+                <p>•	All trainees of the above institutions are placed in the industry 
+                relevant to their disciplines of study and subjected to interim and 
+                final assessments. The results of the successful trainees are
+                 forwarded to the Institutions for them to become qualified for the 
+                 award of the Degree or Diploma Certificates.
+
+                <p>•	Industrial Training of Higher National Diploma (HND) students of 
+                Advanced Technical Institutes.
+
+                <p>•	The industrial training part of HND students is provided by our 
+                authority and there results are notified to the respective 
+                Institutions as in the above case for them to become eligible for 
+                their certificates. Refer the table given below for more details.
+
+                </center></p>
+                <br><br>
+
+                <center><h2><u>National Certificate for Industrial Technician(NCIT) students of the Technical Colleges, Maradana and Ratmalana</u></h2>
+            <br><br>
+            <p>NCIT students of the above institutions too are provided industrial 
+              Training and their results are notified for them to be eligible for 
+              their Certificate . Refer the table given below for more details.
+            </center></p><br><br>
+
+            <center><h2><u>Monitoring of Training</u></h2>
+              <br><br>
+              <p>All trainees are expected to sign the contract of 
+              apprenticeship, and will be called an "Apprentice" in general
+             irrespective of the academic background Monitoring is carried
+             out for the purpose of eliminating possible shortcomings and
+             thus backing up the trainees to get a successful industrial 
+            experience.
+                   
+               <p>Apart from the industry personnel and NAITA staff, Training
+               engineers of the respective universities/institutions along
+               with the academic staff of the respective departments are
+               expected to attend to this activity.
+          </center></p><br><br>
+
+            <center><h2><u>Final/ Interim Assessment of Apprentices</u></h2>
+                        <br><br>
+               <p>The assessments to evaluate their training performance are
+                to be carried out during two stages. That is, at the end
+                 of each 12 weeks (or 3 months) period of training.
+                </center></p>
+
+                <br><h3><u>Each panel comprises,</u></h3>
+                <p>•	Training Engineer of the University
+                <p>•	NAITA representatives
+                <p>•	Industry representative
+                  <br><br>
+                  <h3><u>The assessments evaluate their performance mainly in 4 aspects.</u></h3>
+                  <p>•	Report on In-plant Training
+                    <p> •	Daily Dairy records
+                      <p>•	Attendance and conduct during their training.
+                        <p> •	Viva
+                    
+                  
+</section>
+</section><br><br><br>
+<center><p style="background-color: rosybrown; border-radius: 10px;">06 months training for Higher National Diploma in Information 
+  Technology students of National Institute of Business Management is also
+   commenced in March 2008</p></center><br><br><br>
+
+</body>
+</html>

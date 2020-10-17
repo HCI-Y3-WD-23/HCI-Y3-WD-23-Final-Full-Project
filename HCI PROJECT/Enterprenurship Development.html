@@ -1,0 +1,295 @@
+<html>
+<head>
+  <script>
+    function togglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+    </script>
+<style>
+h1{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30pt;
+}
+h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-bottom: 3%;
+  padding-top: -8%;
+  padding-left: -10%;
+}
+h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h4{
+  font-family: cursive;
+  font-size: large;
+  color:crimson;
+}
+p{
+  font-family: cursive;
+  font-weight: bold;
+}
+img {
+  border: 5px solid #555;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+div.gallery {
+    border-radius:30px;
+    border-style: unset;
+    color: rgb(0, 0, 0);
+
+    text-align: center;
+    font-size: 16px;
+    font-family: cursive;
+    margin: -4px;
+    border: 1px solid #fff;
+    float: center;
+    
+    
+    }
+div.gallery img {
+  width: 100%;
+
+  border-radius: 20px;
+}
+
+div.desc {
+  text-align: center;
+ color: black;
+ text-underline-position:none;
+ padding-left: 10%;
+}
+
+
+div.container {
+
+  text-align: center;
+  display: inline-flex;
+}
+
+div.p{
+  font-family: cursive;
+  font-weight: bold;
+}
+.child{
+  border: 5pt solid white;
+  float: left;
+  width: 50%;
+}
+*{
+  box-sizing: border-box;
+}
+.parent{
+  display: flex;
+  padding-top: 10%;
+  padding-left: 2%;
+}
+input[type=submit]{
+  width: 30%;
+  height: 7%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline:none;
+  box-sizing: border-box;
+  background-color:lightgreen;
+}
+input[type=submit]:hover{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+  cursor: pointer;
+  background-color: lightskyblue;
+}
+button{
+  position: relative;
+  display: inline-block;
+  text-transform:unset;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20%;
+  border-color: white;
+  background-color:#00eeff;
+}
+button:hover{
+  background:linear-gradient(45deg,#7003ff,#00eeff);
+  box-shadow: 0 0 10px rgb(47, 144, 255), 0 0 40px rgb(47, 255, 245), 0 0 80px greenyellow;
+}
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+
+.popup .content {
+  position:absolute;
+  top:200%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:500px;
+  height:250px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+</style>
+</head>
+<body>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button><a href="file:///C:/Users/USER/Desktop/HCI%20PROJECT/trai%20test1.html" style="text-decoration: none; color: black;">Previous</a></button>
+      <h1><center>ENTERPRENURSHIP DEVELOPMENT</h1>
+      <P>  <div class="p">SME sector has become more active and plays a very important role in society. 
+          The Government also encourages to develop and make a strong SME sector in Sri Lanka by giving various promotions.
+           On the other hand SME can create higher volume of jobs opportunities than usual formal organizations can.
+            Presently more and more young men and women try to start their own businesses rather than working under someone.
+          NAITA is one of the leading vocational training providers in Sri Lanka and provides employable skills to 
+          the youth through the apprenticeship training system. Therefore all trainees trained in NAITA fully or 
+          partially gain their training in a work environment or business environment. This feature would be very
+           much favourable for them to manage small enterprises/businesses at the end of their training. An entrepreneurial
+            skill helps a person to make his/ her career a success.
+           </p></div>
+           <br>
+
+           <center><h2><u>COURSE CONTENTS FOR ENTERPRENEURSHIP DEVELOPMENT PROGRAMME</u></h2>
+            <br><br>
+            <div class="container">
+                <div class="gallery">
+                  <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Personnel Entrepreneurship Competencies.jpeg" alt="Cinque Terre"  style="width:200px;height:200px;">
+                  <div class="desc"><b><br>Personnel Entrepreneurship Competencies </b></div>
+                </div>
+
+                <div class="gallery">
+                    <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Business Enviorment 01.jpg" alt="Cinque Terre"  style="width:200px;height:200px;">
+                    <div class="desc"><b><br>Business Environment</b></div>
+                  </div>
+
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                  <div class="gallery">
+                    <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Goal Setting.jpg" alt="Cinque Terre"  style="width:200px;height:200px;">
+                    <div class="desc"><b><br>	Goal Setting </b></div>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="gallery">
+                    <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Resource Identification.png" alt="Cinque Terre"  style="width:200px;height:200px;">
+                    <div class="desc"><b><br>	Resource Identification </b></div>
+                  </div>
+            </div><br><br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div class="container">
+              
+                <div class="gallery">
+                  <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Business Idea Generation 01.jpg" alt="Cinque Terre"  style="width:200px;height:200px;">
+                  <div class="desc"><b><br>	Business Idea Generation  </b></div>
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               
+                <div class="gallery">
+                    <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Business Idea Screening.png" alt="Cinque Terre"  style="width:200px;height:200px;">
+                    <div class="desc"><b><br>	Business Idea Screening </b></div>
+                  </div>
+    
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                  <div class="gallery">
+                    <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Bank Evaluation of Business Plan.jpg" alt="Cinque Terre"  style="width:200px;height:200px;">
+                    <div class="desc"><b><br>	Bank Evaluation of Business Plan </b></div>
+                  </div>
+    
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <div class="gallery">
+                    <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\business-plan-service-250x250.jpg" alt="Cinque Terre"  style="width:200px;height:200px;">
+                    <div class="desc"><b><br>	Business Plan Preparation </b></div>
+                  </div>
+            </div>
+            <br><br>
+            <div class="container">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div class="gallery">
+                  <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Business Idea Selection 01.jpg" alt="Cinque Terre"  style="width:200px;height:200px;">
+                  <div class="desc"><b><br>	Business Idea Selection </b></div>
+                </div>
+            </div>
+
+            
+            
+<section class="parent">
+  <div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup()">&times;</div>
+      <h1>Message</h1>
+      <p>Request sent successfully</p>
+    </div>
+  </div>
+<section class="child">
+    
+    <img src="C:\Users\USER\Desktop\HCI PROJECT\clip arts\Enterprenurship Development pic 1.jpg" alt="Cinque Terre"  style="width:95%;height:375pt; border-radius: 5%;">
+    
+</section>
+
+<section class="child">
+  
+    <h3><u>Course Details</u></h3><br>
+    <p>•	Conducting Entrepreneurship Development programmes varying from 5 days to 14 days.
+    <p>•	Implementing Know About Business (KAB) training programmes for apprentices with coordination of the SIYB association of Sri Lanka.
+    <p>•	This ED section of NAITA conducts tailor made programmes for NGOâ€™s and other community development agencies
+    <p>•  More than 50 Master Trainers are there all over the country to conduct these programmes in Sinhala and Tamil medium
+<br><br><br>
+<h4>Entry Requirments :Conducting Entrepreneurship Awareness programmes for &nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp; diplomates</h4>
+  <input type="submit" value="Apply Now" style="float: bottom;" onclick="togglePopup()">
+<br><br><br>
+</section>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+body{
+	
+	background: url(RegTr.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+	margin : 0;
+	padding: 0;
+	
+}
+
+
+
+.Cont{
+	
+	top: 160%;
+	left: 50%;
+	Position : absolute;
+	transform : translate(-50%,-50%);
+	
+}
+
+.C{
+	
+	Padding : 60px 40px 50px 40px;
+	background-color: black;
+	border-radius : 10px;
+	margin: 30px;
+    border: 1px solid black;
+    opacity: 0.85;
+	color:white;
+	font-weight: bold;
+	font-size: 18px;
+	
+}
+
+
+
+
+*{
+	box-sizing : border-box;
+}
+
+.child{
+	
+	border : 1px solid #FBF8EF;
+	}
+	
+.parent{
+	display : flex;
+}
+
+
+
+*{
+	box-sizing : border-box;
+}
+
+.AB{
+	
+	border : 1px solid #FBF8EF;
+	}
+	
+.ABC{
+	display : flex;
+}
+
+th{
+	
+	color:yellow;
+}
+
+
+U{
+	color:yellow;
+}
+
+p{
+	color: Yellow;
+	text-align:center-right;
+}
+
+
+ button{
+	 
+  
+  background-color: #B6A4A4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  border-radius: 10px;
+}
+	
+	
+
+
+button:hover{
+	
+	background-color:yellow;
+	cursor: pointer;
+	color: black;
+}

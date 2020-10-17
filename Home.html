@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Offshore - Responsive HTML Template">
+	<meta name="author" content="Surjith S.M">
+	<title>Home - NAITA - Human Computer Interaction - IT3060</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.min.css">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+.calendar {
+	background: #F5F3F1;
+	border-radius: 4px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+	height: 460px;
+	perspective: 1000;
+	transition: .9s;
+	transform-style: preserve-3d;
+	float: left;
+	width: 100%
+}
+
+.front {
+	transform: rotateY(0)
+}
+
+.current-date {
+	border-bottom: 1px solid rgba(73, 114, 133, .6);
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 40px
+}
+
+.current-date h1 {
+	color: #977C4F;
+	font-size: 1.4em;
+	font-weight: bolder;
+}
+
+.week-days {
+	color: #dfebed;
+	font-weight: bolder;
+	display: flex;
+	justify-content: space-between;
+	font-weight: 600;
+	padding: 30px 40px
+}
+
+.days {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between
+}
+
+.weeks {
+	color: #811707;
+	font-weight: bolder;
+	display: flex;
+	flex-direction: column;
+	padding: 0 40px
+}
+
+.weeks div {
+	display: flex;
+	font-size: 1.2em;
+	font-weight: 300;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	width: 100%
+}
+
+.last-month {
+	opacity: .3
+}
+
+.weeks span {
+	padding: 10px
+}
+
+.weeks span.active {
+	background: #977C4F;
+	border-radius: 50%
+}
+
+.weeks span:not(.last-month):hover {
+	cursor: pointer;
+	font-weight: 600
+}
+
+.event {
+	position: relative
+}
+
+.event:after {
+	content: '•';
+	color: #f78536;
+	font-size: 1.4em;
+	position: absolute;
+	right: -4px;
+	top: -4px
+}
+
+.back {
+	height: 100%;
+	transform: rotateY(180deg)
+}
+
+.back input {
+	background: 0 0;
+	border: none;
+	border-bottom: 1px solid rgba(73, 114, 133, .6);
+	color: #dfebed;
+	font-size: 1.4em;
+	font-weight: 300;
+	padding: 30px 40px;
+	width: 100%
+}
+
+.info {
+	color: #dfebed;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	font-size: 1.2em;
+	padding: 30px 40px
+}
+
+.info div:not(.observations) {
+	margin-bottom: 40px
+}
+
+.info span {
+	font-weight: 300
+}
+
+.info .date {
+	display: flex;
+	justify-content: space-between
+}
+
+.info .date p {
+	width: 50%
+}
+
+.info .address p {
+	width: 100%
+}
+
+.actions {
+	bottom: 0;
+	border-top: 1px solid rgba(73, 114, 133, .6);
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	width: 100%
+}
+
+.actions button {
+	background: 0 0;
+	border: 0;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 30px 0;
+	text-transform: uppercase;
+	width: 50%
+}
+
+.actions button:first-of-type {
+	border-right: 1px solid rgba(73, 114, 133, .6)
+}
+
+.actions button:hover {
+	background: #497285;
+	cursor: pointer
+}
+
+.actions button:active {
+	background: #5889a0;
+	outline: 0
+}
+
+.flip {
+	transform: rotateY(180deg)
+}
+
+.back,
+.front {
+	backface-visibility: hidden
+}
+</style>
+
+<body class="homepage">
+	<div class="loader-wrapper">
+		<div class="sk-cube-grid">
+			<div class="sk-cube sk-cube1"></div>
+			<div class="sk-cube sk-cube2"></div>
+			<div class="sk-cube sk-cube3"></div>
+			<div class="sk-cube sk-cube4"></div>
+			<div class="sk-cube sk-cube5"></div>
+			<div class="sk-cube sk-cube6"></div>
+			<div class="sk-cube sk-cube7"></div>
+			<div class="sk-cube sk-cube8"></div>
+			<div class="sk-cube sk-cube9"></div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<header>
+			<div class="header-area">
+				<div class="row logo-top-info" style="padding:2px 0;background-color:#811707">
+					<div class="container">
+						<div class="col-md-8 logo">
+							<div class="pull-left">
+								<div class="top-info">
+									<div class="call social-icons">
+										<img src="images/call.png" alt="call " />
+										<h3>CALL US : 011 288 8782</h3>
+									</div>
+									<div class="email">
+										<img src="images/email.png" alt="email " />
+										<h3>EMAIL US : info@naita.gov.lk</h3>
+									</div>
+									<div class="help">
+										<img src="images/help.png" alt="help " />
+										<h3>HELP</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 top-info-social">
+							<div class="pull-right">
+								<div class="top-info">
+									<div><a href="#">ENGLISH</a> | <a href="#">SINHALA</a> | <a href="#">TAMIL</a> &nbsp;&nbsp; 
+									<a href="#">A</a> <a href="#">A</a> <a href="#">A</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-area">
+					<div class="row logo-top-info">
+						<div class="container">
+							<div class="col-md-3 logo">
+								<a href="Home.html"><img src="images/logo.png" alt="Offshore Logo"></a>
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"><span class="sr-only">Main Menu</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+							</div>
+							<div class="col-md-9 top-info-social">
+								<nav id="navbar" class="collapse navbar-collapse main-menu">
+									<div class="container">
+										<ul class="main-menu">
+											<li class="active"><a href="Home.html">Home</a></li>
+											<li><a href="About.html">About</a></li>
+											<li><a href="Downloads.html">Downloads</a></li>
+											<li><a href="Under_Construct.html">Gallery</a></li>
+											<li><a href="Contacts.html">Contacts</a></li>
+											<li><a href="Under_Construct.html">NAITA Mail</a></li>
+											<li><a href="Under_Construct.html">FAQs</a></li>
+											<li><a href="Under_Construct.html">Site Map</a></li>
+											<li>
+											</li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="home-slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li class="has-overlay"><img src="images/slider1.png" alt="Slider 1">
+							<div class="slider-content text-center">
+								<div class="container">
+									<h2>Conducting National Trade Tests.</h2>
+									<p>Conducting of examinations and issuing of certificates and other awards in relation to vocational training.
+										<br>Phosfluorescently whiteboard fully tested initiatives.</p><a style="margin-left: 15%;"class="btn primary-btn">KNOW MORE <i class="fa fa-angle-right"></i></a>
+										<div class="widgets-social" style="margin-top: 200px; float: right;"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+								</div>
+							</div>
+						</li>
+						<li class="has-overlay"><img src="images/slider2.png" alt="Slider 2">
+							<div class="slider-content text-center">
+								<div class="container">
+									<h2>Planning, organizing, and providing vocational training.</h2>
+									<p>Developing the training capacities of establishments and other institutions providing vocational training.
+										<br>Compellingly fabricate cutting-edge portals through alternative
+										<br>opportunities. Objectively customize.</p><a style="margin-left: 15%;" class="btn primary-btn">KNOW MORE <i class="fa fa-angle-right"></i></a>
+										<div class="widgets-social" style="margin-top: 200px; float: right;"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+									</div>
+							</div>
+						</li>
+						<li class="has-overlay"><img src="images/slider3.png" alt="Slider 1">
+							<div class="slider-content text-center">
+								<div class="container">
+									<h2>Part time trainings by training Centers <br>and National Institutes</h2>
+									<p>Conducting of part time training courses and issuing of certificates and other awards in relation to vocational training.
+										<br>Phosfluorescently whiteboard fully tested initiatives.</p><a style="margin-left: 15%;" class="btn primary-btn">KNOW MORE <i class="fa fa-angle-right"></i></a>
+										<div class="widgets-social" style="margin-top: 200px; float: right;"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+									</div>
+							</div>
+						</li>
+						<li class="has-overlay"><img src="images/slider4.png" alt="Slider 1">
+							<div class="slider-content text-center">
+								<div class="container">
+									<h2>In-plant Training founder graduates <br>and diploma students</h2>
+									<p>Conducting on the Job Training for Trainees of other Institutes. 
+										<br>Conducting research and development in vocational training.</p><a style="margin-left: 15%;" class="btn primary-btn">KNOW MORE <i class="fa fa-angle-right"></i></a>
+										<div class="widgets-social" style="margin-top: 200px; float: right;"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+									</div>
+							</div>
+						</li>
+						<li class="has-overlay"><img src="images/slider5.png" alt="Slider 1">
+							<div class="slider-content text-center">
+								<div class="container">
+									<h2>Holding of competitions to promote the development of various skills.</h2>
+									<p>Advising the Tertiary and Vocational Education Commission regarding vocational training.
+										<br>Phosfluorescently whiteboard fully tested initiatives.</p><a style="margin-left: 15%;" class="btn primary-btn">KNOW MORE <i class="fa fa-angle-right"></i></a>
+										<div class="widgets-social" style="margin-top: 200px; float: right;"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+									</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="home-company" style="padding-bottom:0">
+				<div class="container" style="margin-top:-48px">
+					<div class="row services-other">
+						<div class="col-md-4 col-sm-4 col-xs-12" style="margin-top:-165px;z-index:6">
+							<div class="row stats stats-3" style="background: #F5F3F1; margin-bottom: 50px">
+								<div class="col-xs-12"><img src="images/home_icon_building.png" alt=" ">
+									<div class="stats-info">
+										<h2><a style="font-weight:bold" href="NAITA.html">NAITA</a></h2></div>
+								</div>
+								<div class="col-xs-12"><img src="images/home_icon_people.png" alt=" ">
+									<div class="stats-info">
+										<h2><a style="font-weight:bold" href="Trainees.html">TRAINEES</a></h2></div> 
+								</div>
+								<div class="col-xs-12"><img src="images/home_icon_people.png" alt=" ">
+									<div class="stats-info">
+										<h2><a style="font-weight:bold" href="fils\home.html">EMPLOYERS</a></h2></div>
+								</div>
+								<div class="col-xs-12"><img src="images/home_icon_globe.png" alt=" ">
+									<div class="stats-info">
+										<h2><a style="font-weight:bold" href="HtmlDhiva\HCI 01.html">ENROLLMENTS</a></h2></div>
+								</div>
+								<div class="col-xs-12"><img src="images/home_icon_credit.png" alt=" ">
+									<div class="stats-info">
+										<h2><a style="font-weight:bold" href="HCI PROJECT\trai test1.html">OTHER SERVICES</a></h2></div> 
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-12" style="padding-left:60px"; script src="myscripts.js"></script>
+							<h1 style="font-weight:bold; color: #811707">WELCOME TO NAITA</h1>
+							<p style="text-align:justify;">National Apprentice and Industrial Training Authority (NAITA) is a key institution in TVET sector of Sri Lanka operating under the ministry. NAITA has been established in 1990 by restructuring the former National Apprenticeship Board (NAB) which was established in 1971 to conduct Enterprise Based Apprenticeship Programmes.</p>
+							<h3 style="font-weight:bold; color: #811707" >WHAT WE DO</h3>
+							<ul style="list-style-type:circle">
+								<li>Planning, organizing and providing vocational training.</li>
+								<li>Specifying standards in relation to vocational training.</li>
+								<li>Conducting of examinations and issuing of certificates and other awards in relation to vocational training.</li>
+								<li>Conducting National Trade Tests.</li>
+								<li>Preparation and delivery of related instruction.</li>
+								<li>Conducting research and development in vocational training.</li>
+								<li>Holding of competitions to promote the development of various skills.</li>
+								<li>Developing the training capacities of establishments and other institutions providing vocational training.</li>
+								<li>Advising the Tertiary and Vocational Education Commission in regard to vocational training. </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-services" style="padding:0">
+				<div class="container">
+					<div class="row services" style="margin-top: 20px">
+						<div class="col-md-4">
+							<div class="col-md-12" style="background-color: #F5F3F1">
+								<h4 class="ceo-subtitle subtitle">SPECIAL NOTICES | <span style="font-size:19px;font-weight:400"><a style="" href="All_Notices.html">All Notices</a></span></h4>
+								<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">SPECIAL NOTICE - ONE</a></h5>
+								<p style="text-align:justify; font-size: 14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet est vel lectus sollicitudin, non fermentum ligula molestie. Maecenas blandit ac nunc in condimentum. Sed quis blandit elit.
+									<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+							</div>
+							<div class="col-md-12" style="background-color: #F5F3F1">
+								<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">SPECIAL NOTICE - TWO</a></h5>
+								<p style="text-align:justify; font-size: 14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet est vel lectus sollicitudin, non fermentum ligula molestie. Maecenas blandit ac nunc in condimentum. Sed quis blandit elit.
+									<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+							</div>
+							<div class="col-md-12" style="background-color: #F5F3F1;">
+								<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">SPECIAL NOTICE - THREE</a></h5>
+								<p style="text-align:justify; font-size: 14px; margin-bottom: 50px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet est vel lectus sollicitudin, non fermentum ligula molestie. Maecenas blandit ac nunc in condimentum. Sed quis blandit elit.
+									<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+							</div>
+						</div>
+						<div class="col-md-8" style="background-color: #F5F3F1">
+							<h4 class="ceo-subtitle subtitle">NEWS | <span style="font-size:19px;font-weight:400"><a style="" href="All_News.html">All News</a></span></h4>
+							<div class="col-md-6">
+								<div class="hover-effect"><img src="images/services-one.jpg" alt="technology-innovation "></div>
+								<h4 class="services-title-one subtitle">NEWS HEADING - ONE</h4>
+								<p style="text-align:justify; font-size: 14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet est vel lectus sollicitudin, non fermentum ligula molestie. Maecenas blandit ac nunc in condimentum. Sed quis blandit elit. Mauris in porta sem. Nam gravida elementum tellus eget ornare. Aliquam facilisis tellus et lacinia semper. Maecenas blandit ac nunc in condimentum. <br><a href="#" style="font-weight: bold;">October 10, 2020</a></p><a href="#" class="btn btn-default btn-normal" style="margin-bottom: 30px">Read More</a></div>
+							<div class="col-md-6">
+								<div class="row services-other">
+									<div class="col-sm-12" style="margin-bottom:15px">
+										<div class="img-box"><img src="images/news_image_01.png" alt="News image"></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">NEWS HEADING - TWO</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing elit vel lectus.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+									<br>
+									<div class="col-sm-12" style="margin-bottom:15px">
+										<div class="img-box"><img src="images/news_image_02.png" alt="News image"></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">NEWS HEADING - THREE</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing elit vel lectus.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+									<div class="col-sm-12" style="margin-bottom:15px">
+										<div class="img-box"><img src="images/news_image_03.png" alt="News image"></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">NEWS HEADING - FOUR</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing elit vel lectus.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+									<br>
+									<div class="col-sm-12">
+										<div class="img-box"><img src="images/news_image_04.png" alt="News image"></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">NEWS HEADING - FIVE</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing elit vel lectus.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-services">
+				<div class="container">
+					<div class="row services" style="margin-top: -30px">
+						<div class="col-md-4">
+							<div class="col-md-12">
+								<h4 class="ceo-subtitle subtitle">EVENTS | <span style="font-size:19px;font-weight:400"><a style="" href="All_Events.html">All Events</a></span></h4>
+								<div class="row services-other">
+									<div class="col-sm-12" style="margin-bottom:15px">
+										<div class="img-box"><img src="images/event1.png" alt="Event image "></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">EVENT HEADING - ONE</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+									<br>
+									<div class="col-sm-12" style="margin-bottom:15px">
+										<div class="img-box"><img src="images/event2.png" alt="Event image "></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">EVENT HEADING - TWO</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+									<div class="col-sm-12" style="margin-bottom:15px">
+										<div class="img-box"><img src="images/event3.png" alt="Event image "></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">EVENT HEADING - THREE</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+									<br>
+									<div class="col-sm-12">
+										<div class="img-box"><img src="images/event4.png" alt="Event image "></div>
+										<div class="services-info">
+											<h5><a class="services-title-one subtitle" style="font-size:17px;font-weight:bold; color: #C0210A" href="">EVENT HEADING - FOUR</a></h5>
+											<p style="text-align:justify; font-size: 14px">Lorem ipsum sitelit dolor elit sit amet, consectetur adipiscing.<br><a href="#" style="font-weight: bold;">October 10, 2020</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<h4 class="ceo-subtitle subtitle" style="margin-left: 15px">EVENTS CALENDAR</h4>
+							<div class="container">
+								<div class="calendar" style="margin-top: 8px">
+									<div class="front">
+										<div class="current-date">
+											<h1>Friday 15th</h1>
+											<h1>September 2020</h1></div>
+										<div class="current-month">
+											<ul class="week-days">
+												<li>MON</li>
+												<li>TUE</li>
+												<li>WED</li>
+												<li>THU</li>
+												<li>FRI</li>
+												<li>SAT</li>
+												<li>SUN</li>
+											</ul>
+											<div class="weeks">
+												<div class="first"><span class="last-month">28</span> <span class="last-month">29</span> <span class="last-month">30</span> <span class="last-month">31</span> <span>01</span> <span>02</span> <span>03</span></div>
+												<div class="second"><span>04</span> <span>05</span> <span class="event">06</span> <span>07</span> <span>08</span> <span>09</span> <span>10</span></div>
+												<div class="third"><span>11</span> <span>12</span> <span>13</span> <span>14</span> <span class="active">15</span> <span>16</span> <span>17</span></div>
+												<div class="fourth"><span>18</span> <span>19</span> <span>20</span> <span>21</span> <span>22</span> <span>23</span> <span>24</span></div>
+												<div class="fifth"><span>25</span> <span>26</span> <span>27</span> <span>28</span> <span>29</span> <span>30</span> <span>31</span></div>
+											</div>
+										</div>
+									</div>
+									<div class="back">
+										<input placeholder="What 's the event?">
+										<div class="info">
+											<div class="date">
+												<p class="info-date">Date: <span>Jan 15th, 2016</span></p>
+												<p class="info-time">Time: <span>6:35 PM</span></p>
+											</div>
+											<div class="address">
+												<p>Address: <span>129 W 81st St, New York, NY</span></p>
+											</div>
+											<div class="observations">
+												<p>Observations: <span>Be there 15 minutes earlier</span></p>
+											</div>
+										</div>
+										<div class="actions">
+											<button class="save">Save <i class="ion-checkmark"></i></button>
+											<button class="dismiss">Dismiss <i class="ion-android-close"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3" style="margin-top: 55px">
+							<h3 style="font-weight: bold;color: #811707">Event Heading</h3>
+							<p style="text-align:justify; font-size: 14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet est vel lectus sollicitudin, non fermentum ligula molestie. Maecenas blandit ac nunc in condimentum. <br><a href="#" style="font-weight: bold;">October 15, 2020</a></p><a href="#" class="btn btn-default btn-normal">Read More</a></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer" style="margin-top: -80px">
+				<div class="container">
+					<div class="row widgets" style="padding-top:5px"></div>
+				</div>
+			
+			<!-- Footer widgets -->
+                    <div class="row widgets" style="margin-right: 80px; margin-left: 80px">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="about-txt widget">
+                                <img src="images/minister_logo.png" alt="logo" />
+
+                                <p style="text-align:justify; font-size: 14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet est vel lectus sollicitudin, non fermentum ligula molestie. Maecenas blandit ac nunc in condimentum. Sed quis blandit elit. Mauris in porta sem. Nam gravida elementum tellus eget ornare. Aliquam facilisis tellus et lacinia semper. Maecenas blandit ac nunc in condimentum.</p>
+
+                                <div class="widgets-social">
+                                    <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>
+                                    <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2 col-sm-6">
+                            <div class="quick-links" style="float: right;">
+                                <h2 class="widget-title" style="margin-top: 10px; color: #D5C7AF">QUICK LINKS</h2>
+                                <ul>
+                                    <li> <img class="img-box1" src="images/national.png" alt="logo" style="margin-bottom: 15px" /> </li>
+                                    <li> <img class="img-box1" src="images/national.png" alt="logo" style="margin-bottom: 15px" /> </li>
+                                    <li> <img class="img-box1" src="images/TEVC.png" alt="logo" style="margin-bottom: 15px" /> </li>
+                                    <li> <img class="img-box1" src="images/AETI.png" alt="logo" style="margin-bottom: 15px" /> </li>
+                                    <li> <img class="img-box1" src="images/IET.png" alt="logo"/> </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="spacer-50 visible-sm"></div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="our-services widget" style="float: left;">
+                                
+                                <ul>
+                                    <li> <h5><a class="services-title-one subtitle" style="font-size:15px;font-weight:normal; color: #F5F3F1; margin-top: 60px" href="">Ministry of Skills Development and Vocational Training</a></h5> </li>
+                                    <li> <h5><a class="services-title-one subtitle" style="font-size:15px;font-weight:normal; color: #F5F3F1; margin-top: 15px" href="">Sri Lanka German Training Institute</a></h5> </li>
+                                    <li> <h5><a class="services-title-one subtitle" style="font-size:15px;font-weight:normal; color: #F5F3F1; margin-top: 15px" href="">Tertiary and Vocational Education Commission</a></h5> </li>
+                                    <li> <h5><a class="services-title-one subtitle" style="font-size:15px;font-weight:normal; color: #F5F3F1; margin-top: 15px" href="">Automobile Engineering Training Institute</a></h5> </li>
+                                    <li> <h5><a class="services-title-one subtitle" style="font-size:15px;font-weight:normal; color: #F5F3F1; margin-top: 20px" href="">Institute of Engineering Technology</a></h5> </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="newsletter widget">
+                                <h2 class="widget-title" style="margin-top: 15px; color: #D5C7AF">HAVE A PROBLEM</h2>
+                                <p style="text-align:justify; font-size: 14px">Submit your message or problem here and we will contact you as soon as possible.</p>
+                                <!-- ============= Mailchimp Subscribe Form ============= -->
+
+                                <form action="php/subscribe.php" id="subscribeform" method="post">
+                                    <div class="form-group">
+                                        <input type="name" id="name" name="name" placeholder="Enter your name" class="form-control" title="Please enter your name" data-msg-name="Please enter a valid name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="phone" id="phone" name="phone" placeholder="Enter your phone number" class="form-control" title="Please enter your phone" data-msg-email="Please enter a valid phone number">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control" title="Please enter your email" data-msg-email="Please enter a valid email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input style="line-height: 70px;" type="message" id="message" name="message" placeholder="Message" class="form-control" title="Please enter your message" data-msg-email="Please enter a valid message">
+                                    </div>
+                                    <button type="submit" class="btn btn-block" id="js-subscribe-btn"> Submit </button>
+
+                                    <div id="js-subscribe-result" data-success-msg="Done. Submitted" data-error-msg="Oops. Error!"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+			<div class="copyright" style="background-color: #F5F3F1">
+				<div class="container">
+					<div class="row copyright-bar">
+						<div class="col-md-6">
+							<p>Copyright © 2020 NAITA. All rights reserved.</p>
+						</div>
+						<div class="col-md-6 text-right">
+							<p><a href="#">Terms of use</a> <a href="#">Privacy Policy</a> <span>|</span> Made with <i class="fa fa-heart" aria-hidden="true"></i> by HCI Group-WD-23</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<a href="#0" class="cd-top">Top</a></div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/back-to-top.js"></script>
+	<script src="js/validate.js"></script>
+	<script src="js/subscribe.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
